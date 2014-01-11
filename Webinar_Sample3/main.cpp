@@ -12,9 +12,11 @@ void f() {
 
 int main() {
 	ifstream ifs("in.txt");
-	string line;
-	getline(ifs, line);
-	cout << line;
+	while(!ifs.eof()) {
+		string line;
+		getline(ifs, line);
+		cout << line << "\n";
+	}
 
 	return 0;
 }
